@@ -11,7 +11,20 @@
 |
 */
 
-Route::get('/', function()
-{
-	return View::make('hello');
-});
+Route::get('/', 'BlogController@index');
+
+
+### For Admin ###
+Route::any('admin', 'AuthController@login');
+
+Route::any('admin/logout', 'AuthController@logout');
+
+Route::get('admin/dashboard', 'BlogAdminController@index');
+
+Route::any('admin/create', 'BlogAdminController@create');
+
+Route::any('admin/edit/{id}', 'BlogAdminController@edit');
+
+Route::get('admin/delete/{id}', 'BlogAdminController@delete');
+
+Route::when('admin/*', 'auth');
