@@ -1,10 +1,17 @@
 <?php 
 
 	class BlogAdminController extends BaseController {
+
+		/*public function __construct(Blog $blog)
+		{
+			parent::__construct();
+			$this->blog = $blog;
+		}*/
+
 		public function index() {
 			$lists = Blog::all();
 			$site_title = 'Admin Dashboard';
-
+			
 			return View::make('admin.index', compact('site_title', 'lists'));
 		}
 

@@ -1,5 +1,8 @@
 laravelblog
 ===========
+Open command at the application directory
+
+make 	-composer update
 
 Create database laravel-blog
 
