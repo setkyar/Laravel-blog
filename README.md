@@ -1,39 +1,40 @@
 laravelblog
 ===========
-Open command at the application directory
+Open command at the application directory (At Window Ctrl+R and type cmd and at Linux ubuntu Ctrl+Alt+t)
 
-make 	-composer update
+And Type **composer update**. You need to wait for downloading packages.
 
-Create database laravel-blog
+**Create a database in your phpmyadmin**
 
-Edit in app/config/database.php
+As for me I create a **laravel-blog** database.
 
-My Setting is the following. You need to customize for your setting.
+Edit your app configuration
 
-'mysql' => array(
-			'driver'    => 'mysql',
-			'host'      => 'localhost',
-			'database'  => 'laravel-blog',
-			'username'  => 'root',
-			'password'  => '',
-			'charset'   => 'utf8',
-			'collation' => 'utf8_unicode_ci',
-			'prefix'    => '',
-		)
-		
-Open command at the application directory
+- app/config/database.php
 
-make 	-php artisan migrate
-		-php artisan db:seed
-		
-Now application is ready to use :)
 
-To Admin Dashboard
-==================
+- app/config/database.php
 
-- AppURL/admin
-Email 		-setkyar16@gmail.com
-Password 	-admin
+At the database setting
+
+  `'host' => 'localhost',` (Put your host)
+
+  `'database' => 'laravel-blog',` (Put your database)
+
+  `'username' => 'root',` (Put your database user name)
+
+  `'password' => ''` (Put your database password)
+
+
+Open command prompt or terminal at the application directory and type `php artisan migrate db:seed` for demo user
+
+Now application is ready to use!
+
+Go to `www.example.com/admin`! It's to your application admin. We already make demo user so 
+
+`email` => `setkyar16@gmail.com`
+
+`password` => `admin`
 
 
 
