@@ -28,7 +28,7 @@ if (!function_exists('textarea_field'))
 		$ui .= '<div class="form-group">';
 		$ui .= Form::label($name, $label, array('class' => 'col-lg-2 control-label'));
 		$ui .= '<div class="col-lg-10">';
-		$ui .= Form::textarea($name, $value, array('class' => 'form-control ckeditor'));
+		$ui .= Form::textarea($name, $value, array('class' => 'form-control'));
 		$ui .= '</div>';
 		$ui .= '</div>';
 

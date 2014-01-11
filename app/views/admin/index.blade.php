@@ -19,9 +19,9 @@
 	<tr>
 		<td> {{ $list->title }} </td>
 		<td>
-			<a href="{{ URL::to('admin/edit/') }}/{{ $list->id }}">Edit</a>
+			[ <a href="{{ URL::to('admin/edit/') }}/{{ $list->id }}">Edit</a> ]
 			|
-			<a href="{{ URL::to('admin/delete/') }}/{{ $list->id }}">Delete</a>
+			[ <a href="{{ URL::to('admin/delete/') }}/{{ $list->id }}">Delete</a> ]
 		</td>
 	</tr>
 	@endforeach

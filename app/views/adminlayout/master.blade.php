@@ -8,7 +8,6 @@
 		@show
 	</title>
 	{{ HTML::style('css/bootstrap.min.css') }}
-	{{ HTML::script('ckeditor/ckeditor.js') }}
 	<style type="text/css">
 		body {
 			padding-top: 70px;
