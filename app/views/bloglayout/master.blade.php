@@ -31,10 +31,10 @@
 	<div class="navbar-inner">
     <a href="{{ URL::to('/') }}" class="brand">uvu</a>
     	<ul class="nav">
-      		<li class="active"><a href="#">Home</a></li>
+      		<li><a href="{{URL::to('/')}}">Home</a></li>
       		<li><a href="{{ URL::to('about-me')}}">About Me</a></li>
-      		<li><a href="#">Contact Me</a></li>
-      		<li><a href="#">Portfolio</a></li>
+      		<li><a href="{{ URL::to('contact-me') }}">Contact Me</a></li>
+      		<li><a href="{{ URL::to('portfolio') }}">Portfolio</a></li>
 		</ul>
     
     	<form class="navbar-form pull-right">
@@ -45,6 +45,7 @@
 @yield('content')
 
 @yield('footer')
+<p class="footer">Copyright <?php echo date("Y") ?> | Developed by <a href="{{ URL::to('/about-me') }}">Universe</a>.</p>
 </div>
 
 </body>

@@ -16,6 +16,12 @@ Route::get('/', 'BlogController@index');
 //Route For About Me
 Route::get('/about-me', 'PagesController@showAboutMe');
 
+//Route For Contact Me
+Route::get('/contact-me', 'PagesController@showContactMe');
+
+//Route For Portfolio
+Route::get('/portfolio', 'PagesController@showPortfolio');
+
 ### For Admin ###
 Route::any('admin', 'AuthController@login');
 

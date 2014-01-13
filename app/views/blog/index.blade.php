@@ -22,7 +22,6 @@
 @stop
 
 @section('footer')
-	<p class="footer">Copyright <?php echo date("Y") ?> | Developed by <a href="{{ URL::to('/about-me') }}">Universe</a>.</p>
 @stop
 
 
