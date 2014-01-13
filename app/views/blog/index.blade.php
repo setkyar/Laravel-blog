@@ -6,23 +6,25 @@
 
 	@foreach($posts as $post)
 
-	<div class="row">
-		<h2>{{ $post->title }}</h2>
-		<p>{{ $post->content }}</p>	
+	<div class="page-header">
+		<h1>{{ $post->title }}</h1>
 	</div>
-	@endforeach
+		<p class="lead">
+			{{ $post->content }}
+		</p>
+		<hr>
+		@endforeach
 
 @else
-	<div class="row">
-		<h4 style="color:red">Doesn't have any blog posts for now! Please come back later!</h4>
-	</div>
+	<h4 class="message">Doesn't have any blog posts for now! Please come back later!</h4>
 @endif
 
 @stop
 
 @section('footer')
-	<p>Copyright <?php echo date("Y") ?> | Developed by Universe.</p>
+	<p class="footer">Copyright <?php echo date("Y") ?> | Developed by <a href="{{ URL::to('/about-me') }}">Universe</a>.</p>
 @stop
+
 
 
 

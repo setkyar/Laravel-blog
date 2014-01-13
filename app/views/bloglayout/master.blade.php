@@ -6,45 +6,45 @@
 		Universe | {{ $site_title }}
 		@show
 	</title>
-	{{ HTML::style('css/bootstrap.min.css') }}
-
+	{{ HTML::style('css/bootstrap2.css') }}
 	<style type="text/css">
+		html, 
 		body {
-			padding-top: 5em;
+			100%;
 		}
-		.container {
-			width: 95%;
-			margin: 0 auto;
+		.blog-nav {
+			margin-top: 1%;
 		}
-		#main-body {
-			min-height: 37em;
+		.message {
+			color:red; 
+			margin-top:80px;
+			margin-bottom: 48%;
 		}
-
-		#footer {
-			clear: both;
-			padding-top: 1em;
-			min-height: 6em;
-			width: 100%;
-			background-color: orange;
-			color: white;
+		.footer a {
+			text-decoration: none;
 		}
 	</style>
 </head>
 <body>
-<header class="navbar navbar-inverse navbar-fixed-top bs-docs-nav" role="banner">
-	<div class="container">
-		<div class="navbar-header">
-			<a href="{{ url() }}" class="navbar-brand">Universe Blog</a>
-		</div>
-	</div>	
-</header>
+<div class="container">
+	<div class="navbar blog-nav">
+	<div class="navbar-inner">
+    <a href="{{ URL::to('/') }}" class="brand">uvu</a>
+    	<ul class="nav">
+      		<li class="active"><a href="#">Home</a></li>
+      		<li><a href="#">About Me</a></li>
+      		<li><a href="#">Contact Me</a></li>
+      		<li><a href="#">Portfolio</a></li>
+		</ul>
+    
+    	<form class="navbar-form pull-right">
+  			<input type="text" class="span2" placeholder="Searh Posts">
+  			<button type="submit" class="btn">Submit</button>
+		</form>		
+  	</div>
+@yield('content')
 
-<div class="container row" id="main-body">
-	@yield('content')
-</div>
-
-<div class="container row" id="footer">
-	@yield('footer')
+@yield('footer')
 </div>
 
 </body>
