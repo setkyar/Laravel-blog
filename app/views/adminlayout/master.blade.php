@@ -5,7 +5,7 @@
 		@section('title')
 		{{ $site_title }}
 		:: Blog Application
-		@show
+		@show@!
 	</title>
 	{{ HTML::style('css/bootstrap.min.css') }}
 	<style type="text/css">

@@ -7,7 +7,7 @@
 	@foreach($posts as $post)
 
 	<div class="row">
-		<h4>{{ $post->title }}</h4>
+		<h2>{{ $post->title }}</h2>
 		<p>{{ $post->content }}</p>	
 	</div>
 	@endforeach

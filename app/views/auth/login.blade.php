@@ -1,4 +1,4 @@
-@extends('adminlayout.master')
+@extends('auth.loginlayout')
 
 @section('content')
 
@@ -6,20 +6,15 @@
 	{{ Session::get('message') }}
 @endif
 
-{{ Form::open(array('url' => URL::current(), 'class'=> 'form-horizontal')) }}
+<div class="container">
+{{ Form::open(array('url' => URL::current(), 'class'=> 'form-signin')) }}
+	<h2 class="form-signin-heading">Please sign in</h2>
+     
+    {{ Form::text('email', $value="", array('class' => 'input-block-level', 'placeholder' => 'Email address')) }}
 
-<h3>User Login</h3>
+    {{ Form::password('password', array('class' => 'input-block-level', 'placeholder' => 'Password')) }}
 
-{{ text_field('email', 'Email', null) }}
-
-{{ password_field('password', 'Password') }}
-
-<div class="form-group">
-	<div class="col-lg-offset-2 col-lg-10">
-		<button type="submit" class="btn btn-default">Login</button>
-	</div>
-</div>
-
+    <button class="btn btn-large btn-primary" type="submit">Sign in</button>
 {{ Form::close() }}
-
+</div>
 @stop

@@ -3,8 +3,7 @@
 <head>
 	<title>
 		@section('title')
-		{{ $site_title }}
-		:: Universe
+		Universe | {{ $site_title }}
 		@show
 	</title>
 	{{ HTML::style('css/bootstrap.min.css') }}
