@@ -13,6 +13,8 @@
 
 Route::get('/', 'BlogController@index');
 
+//Route For About Me
+Route::get('/about-me', 'AboutmeController@showAboutMe');
 
 ### For Admin ###
 Route::any('admin', 'AuthController@login');

@@ -32,7 +32,7 @@
     <a href="{{ URL::to('/') }}" class="brand">uvu</a>
     	<ul class="nav">
       		<li class="active"><a href="#">Home</a></li>
-      		<li><a href="#">About Me</a></li>
+      		<li><a href="{{ URL::to('about-me')}}">About Me</a></li>
       		<li><a href="#">Contact Me</a></li>
       		<li><a href="#">Portfolio</a></li>
 		</ul>
