@@ -6,7 +6,8 @@
 		Universe | {{ $site_title }}
 		@show
 	</title>
-	{{ HTML::style('css/bootstrap2.css') }}
+	{{ HTML::style('css/bootstrap.min.css') }}
+	{{ HTML::style('css/bootstrap.css') }}
 	<style type="text/css">
 		html, 
 		body {
@@ -28,24 +29,19 @@
 <body>
 <div class="container">
 	<div class="navbar blog-nav">
-	<div class="navbar-inner">
-    <a href="{{ URL::to('/') }}" class="brand">uvu</a>
-    	<ul class="nav">
-      		<li><a href="{{URL::to('/')}}">Home</a></li>
-      		<li><a href="{{ URL::to('about-me')}}">About Me</a></li>
-      		<li><a href="{{ URL::to('contact-me') }}">Contact Me</a></li>
-      		<li><a href="{{ URL::to('portfolio') }}">Portfolio</a></li>
-		</ul>
-    
-    	<form class="navbar-form pull-right">
-  			<input type="text" class="span2" placeholder="Searh Posts">
-  			<button type="submit" class="btn">Submit</button>
-		</form>		
-  	</div>
+		<div class="navbar-inner">
+		    <ul class="nav nav-pills">
+			  	<li class="active"><a href="{{URL::to('/')}}">Home</a></li>
+		  		<li class="active"><a href="{{ URL::to('about-me')}}">About Me</a></li>
+		  		<li class="active"><a href="{{ URL::to('contact-me') }}">Contact Me</a></li>
+		  		<li class="active"><a href="{{ URL::to('portfolio') }}">Portfolio</a></li>
+			</ul>
+	  	</div>
+
 @yield('content')
 
 @yield('footer')
-<p class="footer">Copyright <?php echo date("Y") ?> | Developed by <a href="{{ URL::to('/about-me') }}">Universe</a>.</p>
+	<p class="footer">Copyright <?php echo date("Y") ?> | Developed by <a href="{{ URL::to('/about-me') }}">Universe</a>.</p>
 </div>
 
 </body>

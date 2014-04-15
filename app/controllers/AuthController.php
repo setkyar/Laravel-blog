@@ -1,8 +1,9 @@
 <?php 
 
 	class AuthController extends BaseController {
-		public function login()
-		{
+
+		public function login() {
+
 			$site_title = 'Login';
 
 			if(is_post()) {
@@ -21,9 +22,11 @@
 					}
 				}
 
-				return Redirect::to('admin')->with('message', 'Email / Password is invalid!');
+				return Redirect::to('/admin')->with('message', 'Email / Password is invalid!');
 			}
-			return View::make('auth/login', compact('site_title'));
+			
+			//return Redirect::to('/admin');
+			return View::make('auth.login', compact('site_title'));
 		}
 
 		public function logout()

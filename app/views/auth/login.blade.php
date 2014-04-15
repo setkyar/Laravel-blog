@@ -1,4 +1,4 @@
-@extends('auth.loginlayout')
+@extends('bloglayout.master')
 
 @section('content')
 
@@ -17,4 +17,5 @@
     <button class="btn btn-large btn-primary" type="submit">Sign in</button>
 {{ Form::close() }}
 </div>
+
 @stop
